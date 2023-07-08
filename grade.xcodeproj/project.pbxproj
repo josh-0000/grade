@@ -12,6 +12,9 @@
 		421A63D02A58EE00004D8AB0 /* NewAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421A63CF2A58EE00004D8AB0 /* NewAssignment.swift */; };
 		421A63D22A58EE11004D8AB0 /* settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421A63D12A58EE11004D8AB0 /* settings.swift */; };
 		421A63D62A58EEE0004D8AB0 /* MainBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421A63D52A58EEE0004D8AB0 /* MainBody.swift */; };
+		421A63D82A59A67D004D8AB0 /* GetStarted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421A63D72A59A67D004D8AB0 /* GetStarted.swift */; };
+		421A63DB2A59ACA8004D8AB0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421A63DA2A59ACA8004D8AB0 /* CoreData.framework */; };
+		421A63DE2A59AD09004D8AB0 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 421A63DC2A59AD09004D8AB0 /* DataModel.xcdatamodeld */; };
 		423B8AF92A5379A700E4A356 /* gradeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B8AF82A5379A700E4A356 /* gradeApp.swift */; };
 		423B8AFB2A5379A700E4A356 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B8AFA2A5379A700E4A356 /* ContentView.swift */; };
 		423B8AFD2A5379A800E4A356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423B8AFC2A5379A800E4A356 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		421A63CF2A58EE00004D8AB0 /* NewAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAssignment.swift; sourceTree = "<group>"; };
 		421A63D12A58EE11004D8AB0 /* settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settings.swift; sourceTree = "<group>"; };
 		421A63D52A58EEE0004D8AB0 /* MainBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBody.swift; sourceTree = "<group>"; };
+		421A63D72A59A67D004D8AB0 /* GetStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStarted.swift; sourceTree = "<group>"; };
+		421A63DA2A59ACA8004D8AB0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		421A63DD2A59AD09004D8AB0 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		423B8AF52A5379A700E4A356 /* grade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		423B8AF82A5379A700E4A356 /* gradeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeApp.swift; sourceTree = "<group>"; };
 		423B8AFA2A5379A700E4A356 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421A63DB2A59ACA8004D8AB0 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421A63D92A59ACA8004D8AB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				421A63DA2A59ACA8004D8AB0 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		423B8AEC2A5379A700E4A356 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,7 @@
 				423B8B082A5379A800E4A356 /* gradeTests */,
 				423B8B122A5379A800E4A356 /* gradeUITests */,
 				423B8AF62A5379A700E4A356 /* Products */,
+				421A63D92A59ACA8004D8AB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,7 @@
 			children = (
 				423B8AF82A5379A700E4A356 /* gradeApp.swift */,
 				423B8AFA2A5379A700E4A356 /* ContentView.swift */,
+				421A63D72A59A67D004D8AB0 /* GetStarted.swift */,
 				423B8AFC2A5379A800E4A356 /* Assets.xcassets */,
 				421A63CB2A58ED5E004D8AB0 /* NavBar.swift */,
 				421A63CD2A58EDE0004D8AB0 /* NewClass.swift */,
@@ -113,6 +130,7 @@
 				421A63D12A58EE11004D8AB0 /* settings.swift */,
 				421A63D52A58EEE0004D8AB0 /* MainBody.swift */,
 				423B8AFE2A5379A800E4A356 /* Preview Content */,
+				421A63DC2A59AD09004D8AB0 /* DataModel.xcdatamodeld */,
 			);
 			path = grade;
 			sourceTree = "<group>";
@@ -274,9 +292,11 @@
 			files = (
 				421A63D02A58EE00004D8AB0 /* NewAssignment.swift in Sources */,
 				423B8AFB2A5379A700E4A356 /* ContentView.swift in Sources */,
+				421A63D82A59A67D004D8AB0 /* GetStarted.swift in Sources */,
 				421A63D22A58EE11004D8AB0 /* settings.swift in Sources */,
 				421A63CE2A58EDE0004D8AB0 /* NewClass.swift in Sources */,
 				421A63D62A58EEE0004D8AB0 /* MainBody.swift in Sources */,
+				421A63DE2A59AD09004D8AB0 /* DataModel.xcdatamodeld in Sources */,
 				423B8AF92A5379A700E4A356 /* gradeApp.swift in Sources */,
 				421A63CC2A58ED5E004D8AB0 /* NavBar.swift in Sources */,
 			);
@@ -607,6 +627,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		421A63DC2A59AD09004D8AB0 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				421A63DD2A59AD09004D8AB0 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 421A63DD2A59AD09004D8AB0 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 423B8AED2A5379A700E4A356 /* Project object */;
 }

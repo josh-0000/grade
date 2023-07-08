@@ -24,7 +24,7 @@ struct NavBar: View {
                         Button(action: {
                             viewSwitcher.currentPage = "main"
                         }){
-                            Image("h")
+                            Image("home")
                                 .resizable()
                                 .frame(width:32,height: 32)
                         }

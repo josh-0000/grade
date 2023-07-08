@@ -4,6 +4,8 @@
 //
 //  Created by Joshua Gmys on 7/7/23.
 //
+// Class name, wieghted or points, Class split
+//
 
 import SwiftUI
 

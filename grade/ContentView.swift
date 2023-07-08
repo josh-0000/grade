@@ -24,7 +24,9 @@ struct SemesterInputField: View {
     
     var body: some View {
         VStack {
-            Text("New Semester")
+            Text("New Semester").foregroundColor(Color.blue)
+                .padding(.top, 6.0)
+                .padding()
             // input field for season
             TextField("Season", text: $semesterSeason)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -33,7 +35,9 @@ struct SemesterInputField: View {
             // input field for year
             TextField("Year", text: $semesterYear)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .padding().foregroundColor(Color.white)
+                .cornerRadius(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
+                
             
             // submit button
             Button(action: {
@@ -50,9 +54,11 @@ struct SemesterInputField: View {
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
-            }
+            }.padding(.bottom, 20.0)
         }
-        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+        .frame(width:300,height:200)
     }
 }
 
@@ -72,6 +78,7 @@ struct ContentView: View {
             }
             Spacer()
         }
+        .preferredColorScheme(.dark)
         .edgesIgnoringSafeArea(.all)
         .environmentObject(viewSwitcher)
         .environmentObject(semester)

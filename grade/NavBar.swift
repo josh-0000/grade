@@ -23,7 +23,7 @@ struct NavBar: View {
                         Button(action: {
                             viewSwitcher.currentPage = "main"
                         }){
-                            Text("Gradebook")
+                            Text("Gradar")
                                 .bold()
                                 .font(.system(size: 24))
                                 .foregroundColor(.white)

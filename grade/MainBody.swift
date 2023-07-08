@@ -23,6 +23,7 @@ struct MainBody: View {
             }) {
                 Text("Create Semester")
             }
+            
             //if semester had info display a scroll view with the semesters
             if(!semester.all.isEmpty){
                 ScrollView {
@@ -52,6 +53,6 @@ struct MainBody: View {
 
 struct MainBody_Previews: PreviewProvider {
     static var previews: some View {
-        MainBody()
+        MainBody().environmentObject(SemesterList())
     }
 }

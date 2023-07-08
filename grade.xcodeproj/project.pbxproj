@@ -22,6 +22,10 @@
 		423B8B0A2A5379A800E4A356 /* gradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B8B092A5379A800E4A356 /* gradeTests.swift */; };
 		423B8B142A5379A800E4A356 /* gradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B8B132A5379A800E4A356 /* gradeUITests.swift */; };
 		423B8B162A5379A800E4A356 /* gradeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B8B152A5379A800E4A356 /* gradeUITestsLaunchTests.swift */; };
+		424B10402A5A0D5B0043C45E /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B103C2A5A0D5B0043C45E /* Task+CoreDataClass.swift */; };
+		424B10412A5A0D5B0043C45E /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B103D2A5A0D5B0043C45E /* Task+CoreDataProperties.swift */; };
+		424B10422A5A0D5B0043C45E /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B103E2A5A0D5B0043C45E /* Course+CoreDataClass.swift */; };
+		424B10432A5A0D5B0043C45E /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B103F2A5A0D5B0043C45E /* Course+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		423B8B0F2A5379A800E4A356 /* gradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423B8B132A5379A800E4A356 /* gradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeUITests.swift; sourceTree = "<group>"; };
 		423B8B152A5379A800E4A356 /* gradeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		424B103C2A5A0D5B0043C45E /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		424B103D2A5A0D5B0043C45E /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		424B103E2A5A0D5B0043C45E /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		424B103F2A5A0D5B0043C45E /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		423B8AEC2A5379A700E4A356 = {
 			isa = PBXGroup;
 			children = (
+				424B10442A5A0DC00043C45E /* NSManagedObjectsSubclasses */,
 				423B8AF72A5379A700E4A356 /* grade */,
 				423B8B082A5379A800E4A356 /* gradeTests */,
 				423B8B122A5379A800E4A356 /* gradeUITests */,
@@ -158,6 +167,17 @@
 				423B8B152A5379A800E4A356 /* gradeUITestsLaunchTests.swift */,
 			);
 			path = gradeUITests;
+			sourceTree = "<group>";
+		};
+		424B10442A5A0DC00043C45E /* NSManagedObjectsSubclasses */ = {
+			isa = PBXGroup;
+			children = (
+				424B103C2A5A0D5B0043C45E /* Task+CoreDataClass.swift */,
+				424B103D2A5A0D5B0043C45E /* Task+CoreDataProperties.swift */,
+				424B103E2A5A0D5B0043C45E /* Course+CoreDataClass.swift */,
+				424B103F2A5A0D5B0043C45E /* Course+CoreDataProperties.swift */,
+			);
+			path = NSManagedObjectsSubclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,11 +314,15 @@
 				423B8AFB2A5379A700E4A356 /* ContentView.swift in Sources */,
 				421A63D82A59A67D004D8AB0 /* GetStarted.swift in Sources */,
 				421A63D22A58EE11004D8AB0 /* settings.swift in Sources */,
+				424B10412A5A0D5B0043C45E /* Task+CoreDataProperties.swift in Sources */,
 				421A63CE2A58EDE0004D8AB0 /* NewClass.swift in Sources */,
+				424B10422A5A0D5B0043C45E /* Course+CoreDataClass.swift in Sources */,
 				421A63D62A58EEE0004D8AB0 /* MainBody.swift in Sources */,
+				424B10402A5A0D5B0043C45E /* Task+CoreDataClass.swift in Sources */,
 				421A63DE2A59AD09004D8AB0 /* DataModel.xcdatamodeld in Sources */,
 				423B8AF92A5379A700E4A356 /* gradeApp.swift in Sources */,
 				421A63CC2A58ED5E004D8AB0 /* NavBar.swift in Sources */,
+				424B10432A5A0D5B0043C45E /* Course+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

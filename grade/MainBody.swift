@@ -22,7 +22,7 @@ struct MainBody: View {
                 viewSwitcher.currentPage = "create semester"
             }) {
                 Text("Create Semester")
-            }
+            }.foregroundColor(Color.white)
             
             //if semester had info display a scroll view with the semesters
             if(!semester.all.isEmpty){

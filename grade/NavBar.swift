@@ -11,9 +11,10 @@ struct NavBar: View {
     @EnvironmentObject private var viewSwitcher: ViewSwitcher
     
     var body: some View {
-        Color.blue // Change the color here
+        Color(hue: 1.0, saturation: 0.0, brightness: 0.397) // Change the color here
             .frame(width: UIScreen.main.bounds.width,
                    height: 130)
+            .opacity(0.6)
             .overlay(
                 VStack{
                     
@@ -23,10 +24,9 @@ struct NavBar: View {
                         Button(action: {
                             viewSwitcher.currentPage = "main"
                         }){
-                            Text("Gradar")
-                                .bold()
-                                .font(.system(size: 24))
-                                .foregroundColor(.white)
+                            Image("h")
+                                .resizable()
+                                .frame(width:32,height: 32)
                         }
                         .padding(.leading, 16.0)
                         

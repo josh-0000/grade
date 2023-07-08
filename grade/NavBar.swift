@@ -11,11 +11,15 @@ struct NavBar: View {
     @EnvironmentObject private var viewSwitcher: ViewSwitcher
     
     var body: some View {
-        VStack {
-            Color.blue // Change the color here
-                .frame(width: UIScreen.main.bounds.width, height: 130)
-                .overlay(
-                    HStack{
+        Color.blue // Change the color here
+            .frame(width: UIScreen.main.bounds.width,
+                   height: 130)
+            .overlay(
+                VStack{
+                    
+                    Spacer(minLength:80)
+                    
+                    HStack {
                         Button(action: {
                             viewSwitcher.currentPage = "main"
                         }){
@@ -23,20 +27,27 @@ struct NavBar: View {
                                 .bold()
                                 .font(.system(size: 24))
                                 .foregroundColor(.white)
-                                .position(x: 80, y: 95)
                         }
+                        .padding(.leading, 16.0)
+                        
+                        Spacer()
+                        
                         Button(action: {
                             viewSwitcher.currentPage = "settings"
                         }) {
                             Image("settings")
                                 .resizable()
                                 .frame(width: 30, height: 30)
-                                .position(x:150, y:95)
-                                
                         }
+                        .padding(.trailing, 16.0)
+                        
                     }
-                )
-        }
+
+                    Spacer()
+                    
+                }
+                
+            )
     }
 }
 

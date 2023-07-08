@@ -16,92 +16,6 @@ class SemesterList: ObservableObject {
     }
 }
 
-struct NavBar: View {
-    @EnvironmentObject private var viewSwitcher: ViewSwitcher
-    
-    var body: some View {
-        VStack {
-            Color.blue // Change the color here
-                .frame(width: UIScreen.main.bounds.width, height: 130)
-                .overlay(
-                    HStack{
-                        Button(action: {
-                            viewSwitcher.currentPage = "main"
-                        }){
-                            Text("Gradebook")
-                                .bold()
-                                .font(.system(size: 24))
-                                .foregroundColor(.white)
-                                .position(x: 80, y: 95)
-                        }
-                        Button(action: {
-                            viewSwitcher.currentPage = "settings"
-                        }) {
-                            Image("settings")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                                .position(x:150, y:95)
-                                
-                        }
-                    }
-                )
-        }
-    }
-}
-
-struct Settings: View {
-    @EnvironmentObject private var viewSwitcher: ViewSwitcher
-    
-    var body: some View {
-        Text("Settings")
-        
-    }
-}
-
-struct MainBody: View {
-    @EnvironmentObject private var viewSwitcher: ViewSwitcher
-    @EnvironmentObject private var semester: SemesterList
-    
-    var body: some View {
-        VStack {
-            //if there are no semesters display a spacer to get the message in the middle of the screen
-            if(!semester.all.isEmpty){
-                Spacer(minLength: 10)
-            }
-            //Button to go to create semester page
-            Button(action: {
-                viewSwitcher.currentPage = "create semester"
-            }) {
-                Text("Create Semester")
-            }
-            //if semester had info display a scroll view with the semesters
-            if(!semester.all.isEmpty){
-                ScrollView {
-                    VStack(spacing: 10) {
-                        ForEach(semester.all, id: \.self) { sem in
-                            Button(action: {
-                            }) {
-                                Color.blue
-                                    .frame(width:300, height: 50)
-                                    .overlay(
-                                        Text(sem)
-                                            .foregroundColor(.white)
-                                    )
-                                    .cornerRadius(10)
-                            }
-                        }
-                    }
-                    .padding()
-                }
-            }
-                        if(!semester.all.isEmpty){
-                Spacer()
-            }
-        }
-    }
-}
-
-
 struct SemesterInputField: View {
     @EnvironmentObject private var viewSwitcher: ViewSwitcher
     @EnvironmentObject private var semester: SemesterList
@@ -142,8 +56,6 @@ struct SemesterInputField: View {
     }
 }
 
-
-
 struct ContentView: View {
     @StateObject private var viewSwitcher = ViewSwitcher()
     @StateObject private var semester = SemesterList()
@@ -154,7 +66,7 @@ struct ContentView: View {
             if viewSwitcher.currentPage == "main" {
                 MainBody()
             } else if viewSwitcher.currentPage == "settings" {
-                Settings()
+                settings()
             } else if viewSwitcher.currentPage == "create semester" {
                 SemesterInputField()
             }

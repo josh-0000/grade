@@ -29,7 +29,12 @@ struct NavBar: View {
                                 .frame(width:32,height: 32)
                         }
                         .padding(.leading, 16.0)
-                        
+                        Spacer()
+                        Text("Gradar")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            
                         Spacer()
                         
                         Button(action: {

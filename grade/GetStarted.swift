@@ -15,7 +15,8 @@ struct GetStarted: View {
                 viewSwitcher.currentPage = "create class"
             }) {
                 Text("Get Started")
-            }.foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
+            }
         }
     }
 }

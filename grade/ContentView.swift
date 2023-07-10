@@ -6,7 +6,6 @@ class ViewSwitcher: ObservableObject {
 
 struct ContentView: View {
     @StateObject private var viewSwitcher = ViewSwitcher()
-
     var body: some View {
         VStack {
             NavBar()
@@ -22,7 +21,6 @@ struct ContentView: View {
             }
             Spacer()
         }
-        .preferredColorScheme(.dark)
         .edgesIgnoringSafeArea(.all)
         .environmentObject(viewSwitcher)
     }
